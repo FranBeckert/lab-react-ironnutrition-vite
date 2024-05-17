@@ -33,7 +33,7 @@ function FoodList() {
 
       <SearchBar searchWord={searchWord} searchWordHandler={searchWordHandler} />
 
-      {!filteredFoods.length > 0 ?filteredFoods.map((food) => (
+      {filteredFoods.length > 0 ?filteredFoods.map((food) => (
         <FoodBox key={food.id} food={food} deleteFood={deleteFood} />
       )) : (<div><h1>Oops! There is no more content to show.</h1> <img  src={"https://upload.wikimedia.org/wikipedia/commons/7/73/Prohibition_sign.svg"} style={{width:200}} ></img> </div>) }
     </div>
